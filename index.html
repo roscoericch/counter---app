@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Counter | Project</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="screen">
+        <button class="btn-log">log &#10247;</button>
+        <div class="popup-background"></div>
+
+        <span class="data">0</span>
+      </div>
+      <button class="btn-increase btn">Increase</button>
+      <button class="btn btn-decrease">Decrease</button>
+      <button class="btn btn-save">Save</button>
+      <button class="btn btn-reset">Reset</button>
+
+      <div class="popup-save hidden">
+        <input class="input-save" type="text" placeholder="name of counter" />
+      </div>
+      <div class="popup">
+        <div class="popup-title">
+          <button class="btn btn-clearlog">Clear Log</button>
+          <button class="close btn">&times;</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
