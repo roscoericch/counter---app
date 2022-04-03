@@ -15,20 +15,20 @@
 *::before,
 *::after {
   -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 html {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 62.5%;
 }
 
-/* @media only screen and (max-width: 75em) {
+@media only screen and (max-width: 75em) {
   html {
     font-size: 56.25%;
   }
-} */
+}
 
 @media only screen and (max-width: 56.25em) {
   html {
@@ -44,10 +44,10 @@ html {
 
 body {
   height: 98vh;
-  background-image: url(numbers.png);
+  background-image: url(/img/numbers.png);
   background-size: cover;
   -webkit-filter: blur(100%);
-  filter: blur(100%);
+          filter: blur(100%);
   position: relative;
 }
 
@@ -68,9 +68,10 @@ body {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   padding: 1.5rem;
   border-radius: 2px;
+  overflow: hidden;
   z-index: 10;
 }
 
@@ -82,12 +83,19 @@ body {
 }
 
 .screen {
-  height: 18rem;
+  height: 16rem;
   width: 100%;
   background-color: aqua;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   position: relative;
-  padding: 4rem;
+  padding: 3rem;
+  border-radius: 3px;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .screen {
+    height: 12rem;
+  }
 }
 
 .data {
@@ -96,8 +104,8 @@ body {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-size: 7rem;
+          transform: translate(-50%, -50%);
+  font-size: 9rem;
   text-align: center;
 }
 
@@ -125,7 +133,7 @@ body {
   display: none;
   z-index: 30;
   padding: 1rem;
-  font-size: 2rem;
+  font-size: 3rem;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -135,11 +143,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .popup .popup-body {
@@ -169,7 +177,7 @@ body {
   z-index: 30;
   padding: 1rem;
   background-color: var(--color-white);
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 .popup-save .input-save {
@@ -178,10 +186,12 @@ body {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-size: 1.6rem;
+          transform: translate(-50%, -50%);
+  color: var(--color-black);
+  font-size: 2rem;
   border-radius: 50px;
-  padding: 1.5rem 4rem;
+  width: 90%;
+  padding: 1rem;
   border: 0.5px solid var(--color-black);
   background-color: var(--color-white);
   opacity: 1;
@@ -189,64 +199,88 @@ body {
 
 .popup-save .input-save:focus {
   border: 0.5px solid var(--color-black);
+  background-color: var(--color-white);
+  opacity: 1;
 }
 
 .btn {
   display: block;
-  border-radius: 50px;
+  border-radius: 30px;
   border: none;
   color: var(--color-white);
   -webkit-box-shadow: var(--shadow-light);
-  box-shadow: var(--shadow-light);
+          box-shadow: var(--shadow-light);
   text-transform: uppercase;
+  font-size: 2rem;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
   cursor: pointer;
 }
 
 .btn:not(:last-child) {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-.btn-increase,
-.btn-decrease {
+.btn-increase, .btn-decrease {
   background-color: var(--color-primary-2);
   padding: 3.5rem 10rem;
   position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 @media only screen and (max-width: 56.25em) {
-  .btn-increase,
-  .btn-decrease {
-    width: 96%;
+  .btn-increase, .btn-decrease {
+    width: 100%;
     padding: 2rem 1rem;
+    font-size: 1.5rem;
   }
+}
+
+.btn-increase:active, .btn-decrease:active {
+  -webkit-transform: translate(-50%, -0.5rem);
+          transform: translate(-50%, -0.5rem);
 }
 
 .btn-save {
   background-color: var(--color-primary-1);
-  padding: 2.5rem 5rem;
+  padding: 2rem 5rem;
   display: inline-block;
+}
+
+.btn-save:active {
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
 }
 
 @media only screen and (max-width: 56.25em) {
   .btn-save {
     width: 48%;
-    padding: 2rem 1rem;
+    margin-right: 0.3rem;
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
   }
 }
 
 .btn-reset {
   background-color: var(--color-primary-1);
-  padding: 2.5rem 4.5rem;
+  padding: 2rem 4.5rem;
   display: inline-block;
+}
+
+.btn-reset:active {
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
 }
 
 @media only screen and (max-width: 56.25em) {
   .btn-reset {
     width: 48%;
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
   }
 }
 
@@ -254,6 +288,19 @@ body {
   background-color: rgba(185, 23, 206, 0.994);
   padding: 1rem 3rem;
   margin-top: 2rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .btn-clearlog {
+    width: 48%;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+.btn-clearlog:active {
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
 }
 
 .btn-log {
@@ -264,6 +311,13 @@ body {
   top: 2%;
   right: 1%;
   cursor: pointer;
+  font-size: 2rem;
   border-radius: 4px;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .btn-log {
+    font-size: 1.5rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
