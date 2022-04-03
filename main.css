@@ -3,7 +3,7 @@
   --color-black: #000;
   --color-primary-1: rgb(184, 26, 81);
   --color-primary-2: rgb(89, 144, 216);
-  --shadow-light: 0 0.5rem 2rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -15,12 +15,12 @@
 *::before,
 *::after {
   -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 html {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 62.5%;
 }
 
@@ -44,10 +44,10 @@ html {
 
 body {
   height: 98vh;
-  background-image: url(numbers.png);
+  background-image: url(/img/numbers.png);
   background-size: cover;
   -webkit-filter: blur(100%);
-  filter: blur(100%);
+          filter: blur(100%);
   position: relative;
 }
 
@@ -68,7 +68,7 @@ body {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   padding: 1.5rem;
   border-radius: 2px;
   overflow: hidden;
@@ -104,8 +104,8 @@ body {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-size: 9rem;
+          transform: translate(-50%, -50%);
+  font-size: 3.5rem;
   text-align: center;
 }
 
@@ -143,11 +143,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .popup .popup-body {
@@ -186,7 +186,7 @@ body {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: var(--color-black);
   font-size: 2rem;
   border-radius: 50px;
@@ -205,11 +205,11 @@ body {
 
 .btn {
   display: block;
-  border-radius: 30px;
+  border-radius: 20px;
   border: none;
   color: var(--color-white);
   -webkit-box-shadow: var(--shadow-light);
-  box-shadow: var(--shadow-light);
+          box-shadow: var(--shadow-light);
   text-transform: uppercase;
   font-size: 2rem;
   -webkit-transition: -webkit-transform 0.3s;
@@ -223,29 +223,26 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.btn-increase,
-.btn-decrease {
+.btn-increase, .btn-decrease {
   background-color: var(--color-primary-2);
   padding: 3.5rem 10rem;
   position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 @media only screen and (max-width: 56.25em) {
-  .btn-increase,
-  .btn-decrease {
+  .btn-increase, .btn-decrease {
     width: 100%;
     padding: 2rem 1rem;
     font-size: 1.5rem;
   }
 }
 
-.btn-increase:active,
-.btn-decrease:active {
-  -webkit-transform: translate(-50%, -0.5rem);
-  transform: translate(-50%, -0.5rem);
+.btn-increase:active, .btn-decrease:active {
+  -webkit-transform: translate(-50%, 0.5rem);
+          transform: translate(-50%, 0.5rem);
 }
 
 .btn-save {
@@ -255,8 +252,8 @@ body {
 }
 
 .btn-save:active {
-  -webkit-transform: translateY(-0.5rem);
-  transform: translateY(-0.5rem);
+  -webkit-transform: translateY(0.5rem);
+          transform: translateY(0.5rem);
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -275,8 +272,8 @@ body {
 }
 
 .btn-reset:active {
-  -webkit-transform: translateY(-0.5rem);
-  transform: translateY(-0.5rem);
+  -webkit-transform: translateY(0.5rem);
+          transform: translateY(0.5rem);
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -302,8 +299,8 @@ body {
 }
 
 .btn-clearlog:active {
-  -webkit-transform: translateY(-0.5rem);
-  transform: translateY(-0.5rem);
+  -webkit-transform: translateY(0.5rem);
+          transform: translateY(0.5rem);
 }
 
 .btn-log {
