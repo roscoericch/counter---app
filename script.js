@@ -16,15 +16,30 @@ const popup_body = document.querySelector('.popup-body');
 const logs = document.getElementsByClassName('popup-content');
 
 let count = 0;
+
 increasebtn.addEventListener('click', () => {
   count++;
   screen.textContent = count;
+  if (count > 0) {
+    decreasebtn.classList.add('animate');
+    decreasebtn.classList.remove('inactive');
+  }
+  if (count <= 0) {
+    decreasebtn.classList.remove('animate');
+    decreasebtn.classList.add('inactive');
+  }
 });
 
 decreasebtn.addEventListener('click', () => {
   if (count > 0) {
     count--;
     screen.textContent = count;
+    decreasebtn.classList.add('animate');
+    decreasebtn.classList.remove('inactive');
+  }
+  if (count <= 0) {
+    decreasebtn.classList.remove('animate');
+    decreasebtn.classList.add('inactive');
   }
 });
 
@@ -81,3 +96,4 @@ input.addEventListener('keydown', e => {
 popup_save.addEventListener('click', () => {
   popup_save.classList.add('hidden');
 });
+console.log(count);

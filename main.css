@@ -44,7 +44,7 @@ html {
 
 body {
   height: 98vh;
-  background-image: url(/img/numbers.png);
+  background-image: url(numbers.png);
   background-size: cover;
   -webkit-filter: blur(100%);
   filter: blur(100%);
@@ -251,12 +251,6 @@ body {
   }
 }
 
-.btn-increase:active,
-.btn-decrease:active {
-  -webkit-transform: translate(-50%, 0.5rem);
-  transform: translate(-50%, 0.5rem);
-}
-
 .btn-save {
   background-color: var(--color-primary-1);
   padding: 2rem 5rem;
@@ -331,5 +325,14 @@ body {
   .btn-log {
     font-size: 1rem;
   }
+}
+
+.animate:active {
+  -webkit-transform: translate(-50%, 0.5rem);
+  transform: translate(-50%, 0.5rem);
+}
+
+.inactive {
+  opacity: 0.6;
 }
 /*# sourceMappingURL=main.css.map */
